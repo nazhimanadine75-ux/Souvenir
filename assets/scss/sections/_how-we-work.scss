@@ -1,0 +1,85 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# How We Work Section
+--------------------------------------------------------------*/
+.how-we-work {
+  padding: 80px 0;
+
+  .process-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 48px 40px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--default-color), transparent 70%);
+    }
+  }
+
+  .step-num {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: color-mix(in srgb, var(--default-color), transparent 82%);
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+  }
+
+  .process-card:hover .step-num {
+    color: var(--accent-color);
+  }
+
+  .process-content {
+    padding-top: 6px;
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 0;
+      max-width: 380px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .process-card {
+      padding: 40px 32px;
+    }
+
+    .step-num {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .process-card {
+      padding: 32px 16px;
+      gap: 20px;
+    }
+
+    .step-num {
+      font-size: 2rem;
+    }
+
+    .process-content {
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

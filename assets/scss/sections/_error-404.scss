@@ -1,0 +1,156 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Error 404 Section
+--------------------------------------------------------------*/
+.error-404 {
+  padding-top: 184px;
+  padding-bottom: 100px;
+
+  .error-block {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .error-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    margin-bottom: 16px;
+  }
+
+  .error-code {
+    font-size: clamp(5rem, 12vw, 10rem);
+    font-weight: 700;
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    margin: 0 auto 32px;
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 16px;
+  }
+
+  .error-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .search-area {
+    max-width: 440px;
+    margin: 0 auto 48px;
+
+    .input-group {
+      overflow: hidden;
+    }
+
+    .form-control {
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-right: none;
+      border-radius: 0;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--default-color);
+      background-color: var(--surface-color);
+
+      &:focus {
+        box-shadow: none;
+        border-color: var(--accent-color);
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 65%);
+      }
+    }
+
+    .search-btn {
+      background-color: transparent;
+      color: var(--default-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-left: none;
+      border-radius: 0;
+      padding: 0.85rem 1.25rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  .action-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    .btn-home,
+    .btn-contact {
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.7rem 1.75rem;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      background-color: transparent;
+      border-radius: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+      }
+    }
+
+    .link-divider {
+      width: 1px;
+      height: 20px;
+      background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 72px 0;
+
+    .error-code {
+      font-size: clamp(4rem, 10vw, 7rem);
+    }
+
+    .error-title {
+      font-size: 1.25rem;
+    }
+
+    .error-text {
+      padding: 0 16px;
+    }
+
+    .search-area {
+      padding: 0 16px;
+    }
+
+    .action-links {
+      flex-direction: column;
+      gap: 16px;
+
+      .link-divider {
+        display: none;
+      }
+    }
+  }
+}

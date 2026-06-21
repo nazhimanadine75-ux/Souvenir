@@ -1,0 +1,35 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 80px 0;
+  background-color: var(--surface-color);
+
+  .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    border-radius: 0;
+    transition: border-color 0.3s;
+
+    img {
+      max-height: 48px;
+      width: auto;
+      opacity: 0.4;
+      filter: grayscale(100%);
+      transition: opacity 0.3s, filter 0.3s;
+    }
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+
+      img {
+        opacity: 1;
+        filter: none;
+      }
+    }
+  }
+}

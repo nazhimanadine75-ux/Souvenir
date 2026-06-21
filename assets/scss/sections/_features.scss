@@ -1,0 +1,115 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features {
+  .feature-card {
+    background: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--default-color), transparent 95%);
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+      box-shadow: 0 4px 12px color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+  }
+
+  .card-visual {
+    background: color-mix(in srgb, var(--accent-color), transparent 95%);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+
+    img {
+      max-height: 160px;
+      object-fit: contain;
+    }
+  }
+
+  .card-body-content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 24px;
+    }
+  }
+
+  .card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+    margin-bottom: 16px;
+    width: fit-content;
+
+    i {
+      font-size: 12px;
+    }
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: auto;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    padding-top: 16px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      i {
+        color: var(--accent-color);
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card-visual {
+      padding: 24px;
+
+      img {
+        max-height: 120px;
+      }
+    }
+  }
+}

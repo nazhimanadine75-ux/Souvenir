@@ -1,0 +1,146 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact {
+  .info-row {
+    margin-bottom: 80px;
+  }
+
+  .info-card {
+    text-align: center;
+    padding: 48px 24px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    height: 100%;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    }
+
+    i {
+      font-size: 24px;
+      color: var(--accent-color);
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--default-color);
+      margin-bottom: 0;
+      opacity: 0.8;
+    }
+  }
+
+  .form-wrapper {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--heading-color);
+    }
+
+    >p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--default-color);
+      opacity: 0.75;
+      margin-bottom: 48px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-control {
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 0;
+      padding: 14px 16px;
+      font-size: 15px;
+      color: var(--default-color);
+      background-color: var(--surface-color);
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 65%);
+      }
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    .submit-btn {
+      background: transparent;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      padding: 14px 48px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .info-row {
+      margin-bottom: 64px;
+    }
+
+    .form-wrapper {
+      margin-bottom: 64px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .info-row {
+      margin-bottom: 48px;
+    }
+
+    .info-card {
+      padding: 32px 20px;
+    }
+
+    .form-wrapper {
+      margin-bottom: 48px;
+
+      h3 {
+        font-size: 26px;
+      }
+
+      >p {
+        margin-bottom: 36px;
+      }
+    }
+
+    .social-row {
+      padding-top: 36px;
+    }
+  }
+}

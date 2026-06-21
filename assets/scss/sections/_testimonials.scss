@@ -1,0 +1,163 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials {
+  padding: 80px 0;
+
+  .review-carousel {
+    position: relative;
+    padding-bottom: 60px;
+
+    .swiper-wrapper {
+      height: auto !important;
+    }
+  }
+
+  .review-card {
+    padding: 48px 0;
+  }
+
+  .review-content {
+    .quote-mark {
+      display: block;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 32px;
+      line-height: 1;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+      margin: 0 0 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .reviewer-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .reviewer-meta {
+    text-align: left;
+
+    h5 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin: 0 0 2px;
+    }
+
+    span {
+      font-size: 0.8rem;
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+
+    i {
+      font-size: 0.75rem;
+      color: var(--accent-color);
+    }
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--default-color), transparent 75%);
+      opacity: 1;
+      margin: 0 5px;
+      transition: background 0.3s ease, transform 0.3s ease;
+
+      &.swiper-pagination-bullet-active {
+        background: var(--accent-color);
+        transform: scale(1.4);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    .review-card {
+      padding: 32px 0;
+    }
+
+    .review-content {
+      .quote-mark {
+        font-size: 2rem;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 32px;
+      }
+    }
+
+    .reviewer-info {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .reviewer-meta {
+      h5 {
+        font-size: 0.9rem;
+      }
+
+      span {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .review-carousel {
+      padding-bottom: 48px;
+    }
+
+    .review-card {
+      padding: 24px 0;
+    }
+
+    .review-content {
+      .quote-mark {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 0.95rem;
+        margin-bottom: 28px;
+      }
+    }
+  }
+}

@@ -1,0 +1,311 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Privacy Section
+--------------------------------------------------------------*/
+.privacy {
+
+  // Section Labels
+  .section-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .section-desc {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  // Policy Header
+  .policy-header {
+    padding: 48px 0;
+
+    .date-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 32px 0;
+
+      h2 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  // Trust Badges
+  .trust-badges {
+    gap: 32px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+
+      i {
+        font-size: 1.1rem;
+        color: var(--accent-color);
+      }
+    }
+
+    @media (max-width: 576px) {
+      gap: 20px;
+    }
+  }
+
+  // Data Practices
+  .practices-section {
+    padding: 64px 0;
+
+    .practice-nav {
+      border: none;
+      gap: 0;
+      margin-bottom: 32px;
+
+      .nav-link {
+        border: none;
+        border-bottom: 2px solid transparent;
+        background: transparent;
+        padding: 10px 24px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: color-mix(in srgb, var(--default-color), transparent 50%);
+        border-radius: 0;
+        transition: color 0.3s, border-color 0.3s;
+
+        &:hover {
+          color: var(--default-color);
+        }
+
+        &.active {
+          color: var(--default-color);
+          border-bottom-color: var(--accent-color);
+          background: transparent;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .nav-link {
+          padding: 8px 16px;
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .tab-content {
+      padding: 24px 0;
+    }
+
+    .detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+
+      li {
+        padding: 14px 0;
+        font-size: 0.92rem;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 93%);
+        line-height: 1.6;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // Security Layers
+  .security-layers {
+    padding: 64px 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .layer-card {
+      padding: 48px 24px;
+      background: var(--surface-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+      border-radius: 2px;
+      height: 100%;
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+      }
+
+      .layer-num {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: color-mix(in srgb, var(--default-color), transparent 70%);
+        margin-bottom: 20px;
+      }
+
+      i {
+        font-size: 1.5rem;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        font-size: 0.88rem;
+        line-height: 1.65;
+        margin: 0;
+      }
+    }
+  }
+
+  // User Rights
+  .user-rights {
+    padding: 64px 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .rights-card {
+      padding: 48px 24px;
+      height: 100%;
+
+      i {
+        font-size: 1.5rem;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        font-size: 0.88rem;
+        line-height: 1.65;
+        margin: 0;
+      }
+    }
+  }
+
+  // Additional Policies
+  .additional-policies {
+    padding: 64px 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .addl-card {
+      padding: 40px 24px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+      border-radius: 2px;
+      height: 100%;
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+      }
+
+      i {
+        font-size: 1.4rem;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 18px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        font-size: 0.88rem;
+        line-height: 1.65;
+        margin: 0;
+      }
+    }
+  }
+
+  // Contact Strip
+  .contact-strip {
+    padding: 80px 0 32px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 32px;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 2px;
+      transition: color 0.3s, background-color 0.3s;
+
+      i {
+        font-size: 1rem;
+        transition: transform 0.3s;
+      }
+
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+
+        i {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}

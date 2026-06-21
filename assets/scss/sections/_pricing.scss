@@ -1,0 +1,174 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing {
+  .plan-block {
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+    border-radius: 0;
+    padding: 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--default-color) 20%, transparent);
+    }
+
+    &.highlighted {
+      border-top: 2px solid var(--accent-color);
+    }
+
+    .tier-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 24px;
+
+      .recommended-tag {
+        color: var(--accent-color);
+        text-transform: none;
+        font-weight: 500;
+        letter-spacing: 0;
+        font-size: 0.8rem;
+      }
+    }
+
+    .tier-price {
+      display: flex;
+      align-items: baseline;
+      gap: 2px;
+      margin-bottom: 16px;
+
+      .symbol {
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+      }
+
+      .value {
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: var(--heading-color);
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .cycle {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: color-mix(in srgb, var(--default-color), transparent 50%);
+        margin-left: 4px;
+      }
+    }
+
+    .tier-summary {
+      font-size: 0.9rem;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+      margin: 32px 0;
+    }
+
+    .tier-perks {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 48px 0;
+      flex-grow: 1;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        font-size: 0.9rem;
+        color: var(--default-color);
+        line-height: 1.6;
+
+        i {
+          font-size: 0.7rem;
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .action-link {
+      display: block;
+      width: 100%;
+      padding: 14px 24px;
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border: 1px solid color-mix(in srgb, var(--default-color) 20%, transparent);
+      border-radius: 2px;
+      color: var(--default-color);
+      background-color: transparent;
+      transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+      margin-top: auto;
+
+      &:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+      }
+
+      &.solid {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        color: var(--contrast-color);
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+        }
+      }
+    }
+  }
+
+  .bottom-note {
+    font-size: 0.8rem;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
+  }
+
+  .bottom-cta {
+    font-size: 0.875rem;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin-bottom: 0;
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: color-mix(in srgb, var(--accent-color), transparent 15%);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .plan-block {
+      padding: 36px 28px;
+
+      .tier-price .value {
+        font-size: 2.75rem;
+      }
+
+      .tier-perks {
+        margin-bottom: 36px;
+      }
+    }
+  }
+}

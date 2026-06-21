@@ -1,0 +1,125 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio {
+  .filter-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 80px;
+
+    li {
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: color-mix(in srgb, var(--default-color), transparent 60%);
+      padding: 8px 0;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--default-color);
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: var(--default-color);
+      }
+
+      &.filter-active {
+        color: var(--default-color);
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 16px 32px;
+    }
+  }
+
+  .work-piece {
+    margin: 0;
+
+    &:hover {
+      .work-media img {
+        transform: scale(1.02);
+      }
+
+      .hover-layer {
+        opacity: 1;
+      }
+    }
+  }
+
+  .work-media {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+  }
+
+  .hover-layer {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--default-color), transparent 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .action-link {
+    color: var(--contrast-color);
+    font-size: 22px;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      color: var(--contrast-color);
+      opacity: 0.6;
+    }
+  }
+
+  .work-meta {
+    padding: 24px 0 0;
+
+    .tag {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: 0.3px;
+    }
+  }
+}

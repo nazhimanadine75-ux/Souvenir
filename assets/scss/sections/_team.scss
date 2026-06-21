@@ -1,0 +1,121 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Team Section
+--------------------------------------------------------------*/
+.team {
+  .intro {
+    max-width: 680px;
+    margin: 0 auto 64px;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--default-color);
+    }
+  }
+
+  .team-member {
+    height: 100%;
+    background: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color) 8%, transparent);
+    border-radius: 0;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+
+    .member-img {
+      img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+    }
+
+    .member-info {
+      padding: 32px;
+      text-align: center;
+
+      .member-role {
+        display: inline-block;
+        margin-bottom: 14px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-color);
+      }
+
+      h4 {
+        margin-bottom: 16px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--heading-color);
+      }
+
+      p {
+        margin: 0 0 28px;
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: var(--default-color);
+      }
+
+      .social {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border: 1px solid color-mix(in srgb, var(--default-color) 10%, transparent);
+          border-radius: 0;
+          color: var(--default-color);
+          font-size: 1rem;
+          transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+
+          &:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            background-color: var(--surface-color);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .intro {
+      margin-bottom: 56px;
+    }
+
+    .team-member {
+      .member-info {
+        padding: 28px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .intro {
+      margin-bottom: 48px;
+    }
+
+    .team-member {
+      .member-info {
+        padding: 24px;
+
+        p {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

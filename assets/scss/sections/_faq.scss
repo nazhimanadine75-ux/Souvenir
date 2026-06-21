@@ -1,0 +1,161 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Faq Section
+--------------------------------------------------------------*/
+.faq {
+  .intro-block {
+    position: sticky;
+    top: 120px;
+    padding-top: 8px;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: gap 0.3s ease;
+
+      &:hover {
+        gap: 14px;
+      }
+
+      i {
+        font-size: 14px;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    @media (max-width: 992px) {
+      position: static;
+      margin-bottom: 48px;
+      max-width: 500px;
+    }
+  }
+
+  .faq-wrapper {
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    transition: all 0.3s ease;
+
+    &.faq-active {
+      .faq-header {
+        h4 {
+          color: var(--default-color);
+        }
+
+        .faq-toggle {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .faq-content {
+        grid-template-rows: 1fr;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .faq-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      cursor: pointer;
+      gap: 24px;
+      transition: all 0.3s ease;
+
+      h4 {
+        flex: 1;
+        margin: 0;
+        font-family: var(--heading-font);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--heading-color);
+        line-height: 1.6;
+        letter-spacing: -0.01em;
+        transition: color 0.3s ease;
+      }
+
+      .faq-toggle {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        font-size: 16px;
+
+        i {
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &:hover {
+        h4 {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    .faq-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+      visibility: hidden;
+      opacity: 0;
+
+      .content-inner {
+        overflow: hidden;
+        padding: 0 0 28px 0;
+
+        p {
+          margin: 0;
+          color: color-mix(in srgb, var(--default-color), transparent 30%);
+          line-height: 1.8;
+          font-size: 0.95rem;
+          font-weight: 400;
+          max-width: 540px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .faq-header {
+        padding: 24px 0;
+        gap: 16px;
+
+        h4 {
+          font-size: 0.975rem;
+        }
+      }
+
+      .faq-content {
+        .content-inner {
+          padding: 0 0 24px 0;
+
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

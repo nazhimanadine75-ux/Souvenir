@@ -1,0 +1,74 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services {
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 40px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  }
+
+  .service-num {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: color-mix(in srgb, var(--default-color), transparent 82%);
+    flex-shrink: 0;
+    min-width: 56px;
+    font-family: var(--heading-font);
+  }
+
+  .service-body {
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    p {
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 16px;
+    }
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-color);
+    transition: opacity 0.3s ease;
+
+    i {
+      margin-left: 6px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-item {
+      padding: 32px 0;
+      gap: 20px;
+    }
+
+    .service-num {
+      font-size: 32px;
+      min-width: 44px;
+    }
+
+    .service-body {
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}
