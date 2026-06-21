@@ -1,0 +1,30 @@
+# robots.txt for NS Souvenir (https://ns-liart.vercel.app)
+
+User-agent: *
+Allow: /
+Disallow: /forms/
+
+# Allow major AI crawlers for AEO and GEO (AI Search Overviews)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap Link
+Sitemap: https://ns-liart.vercel.app/sitemap.xml

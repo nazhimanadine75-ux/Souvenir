@@ -1,0 +1,21 @@
+{
+  "name": "NS Souvenir - Souvenir Perusahaan & Corporate Gift",
+  "short_name": "NS Souvenir",
+  "description": "Penyedia souvenir kantor, corporate gift, dan merchandise promosi premium dengan custom logo dan kualitas terbaik.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
